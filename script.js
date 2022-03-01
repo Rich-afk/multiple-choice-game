@@ -1,39 +1,78 @@
-// Selects element by class
-var timeEl = document.querySelector(".time");
+var startEl = document.querySelector('#start');
+var gameEl = document.querySelector('#game');
+var endEl = document.querySelector('#end');
 
-// Selects element by id
-var mainEl = document.getElementById("main");
+var beginBtn = document.querySelector('#begin');
+var initialsInput = document.querySelector('#initials');
 
-var secondsLeft = 60;
+var question =  [
+    {
+        questionTitle: 'This is question 1',
+        choices: ['choice one', 'choice two', 'choice three','choice four'],
+        correctAns: 'choice one'
+    },
 
-function printSecondsLeft() {
-  timeEl.textContent = secondsLeft;
-}
+    {
+        questionTitle: 'This is question 2',
+        choices: ['choice one', 'choice two', 'choice three','choice four'],
+        correctAns: 'choice one'
+    },
 
-function setTime() {
-  printSecondsLeft();
-  // Sets interval in variable
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    printSecondsLeft();
+    {
+        questionTitle: 'This is question 3',
+        choices: ['choice one', 'choice two', 'choice three','choice four'],
+        correctAns: 'choice one'
+    },
 
-    if(secondsLeft === 0) {
-      // Stops execution of action at set interval
-      clearInterval(timerInterval);
-      // Calls function to create and append image
-      sendMessage();
+    {
+        questionTitle: 'This is question 4',
+        choices: ['choice one', 'choice two', 'choice three','choice four'],
+        correctAns: 'choice one'
     }
+];
 
-  }, 1000);
+function startScreen() {
+  startEl.style.display = "block";
+  gameEl.style.display = "none";
+  endEl.style.display = "none";
 }
 
-// Function to create and append colorsplosion image
-function sendMessage() {
-  timeEl.textContent = " ";
-  var imgEl = document.createElement("img");
-  imgEl.setAttribute("src", "images/image_1.jpg");
-  mainEl.appendChild(imgEl);
+function gameScreen() {
+  startEl.style.display = "none";
+  gameEl.style.display = "block";
+  endEl.style.display = "none";
 
+
+  //maybe have this as a seperate function
+    var title = question[0].questionTitle;
+    var answerBtn = document.createElement('p');
+
+    //title
+    answerBtn.textContent = 1 + '.' + title;
+    gameEl.appendChild(answerBtn);
+    
+    //choices
+    for(var i = 0; i < 4; i++) {
+        var choiceOneBtn = document.createElement('button');
+        choiceOneBtn.textContent = question[0].choices[i];
+        gameEl.appendChild(choiceOneBtn);
+    }
 }
 
-setTime();
+//give each choice an event listener, which brings it to the next question. We want to replace 0 with 1 then, so maybe have a globally incrementing value.
+//
+
+function endScreen() {
+  startEl.style.display = "none";
+  gameEl.style.display = "none";
+  endEl.style.display = "block";
+}
+
+function init() {
+  startScreen();
+}
+
+beginBtn.addEventListener('click', gameScreen);
+gameEl.addEventListener('click', endScreen);
+
+init();

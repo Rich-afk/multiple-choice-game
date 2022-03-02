@@ -60,7 +60,8 @@ function gameScreen() {
 }
 
 //give each choice an event listener, which brings it to the next question. We want to replace 0 with 1 then, so maybe have a globally incrementing value.
-//
+
+
 
 function endScreen() {
   startEl.style.display = "none";

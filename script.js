@@ -19,7 +19,7 @@ var timerInterval;
 var questions = [
 
     {
-        questionTitle: "What's my name'?",
+        questionTitle: "What's my name?",
         choices: ['Rich', 'Richard', 'Casey', 'Poor'],
         correctAns: 'Richard'
     },
@@ -38,8 +38,8 @@ var questions = [
 
     {
         questionTitle: 'What is my favorite color?',
-        choices: ['red', 'purple', 'blue', 'black'],
-        correctAns: 'red'
+        choices: ['Red', 'Purple', 'Blue', 'Black'],
+        correctAns: 'Red'
     },
 
     {
@@ -81,7 +81,7 @@ function renderQuestion() {
 
     var title = question.questionTitle;
 
-    var titleHeading = document.createElement('h1');
+    var titleHeading = document.createElement('h2');
 
     titleHeading.textContent = title;
     questionEl.appendChild(titleHeading);
@@ -128,10 +128,6 @@ function highscoreScreen() {
     }
 }
 
-
-
-
-
 function init() {
     startScreen();
 }
@@ -157,8 +153,12 @@ gameEl.addEventListener('click', function (event) {
         //if the button text matches the answer, add 100
         if(event.target.innerHTML === questions[count].correctAns) {
             score += 100;
-            //checking if it actually matches
-            console.log('correct');
+        }
+        else {
+            secondsLeft -= 10;
+            // var incorrect = 'Incorrect!';
+            // var inHeading = document.createElement('h2');
+            // gameEl.appendChild(inHeading);
         }
         count++;
         if (count < questions.length) {

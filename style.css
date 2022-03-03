@@ -14,18 +14,88 @@
     justify-content: space-evenly;
 }
 
-div h1 {
+main {
+    font-size: 50px;
+    text-align: center;
     display: flex;
-    margin: 10px;
+    line-height: 100px;
+    justify-content: center;
+}
+
+h1 {
+    margin: 20px;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    line-height: 100px;
+    justify-content: center;
+}
+
+.endbutton {
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    align-self: center;
+    text-decoration: none;
+    border: none;
+    display: flex;
+    transition: all 500ms ease;
+    border-radius: 10%;
+}
+
+div button {
+    font-size: 30px;
+    text-align: left;
+    height: 50px;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    align-self: center;
+    text-decoration: none;
+    border: none;
+    display: block;
+    transition: all 500ms ease;
+    border-radius: 10%;
+    margin: 20px;
 }
 
 button {
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    justify-content: center;
     background-color: black;
     color: white;
+    align-self: center;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    transition: all 500ms ease;
+    border-radius: 10%;
+}
+
+button:hover {
+    background-color: #f8f8ff;
+    color: black;
+    text-shadow: none;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    display: flex;
+    line-height: 100px;
     justify-content: center;
 }
 
-main {
-    color: white;
-    justify-content: center;
+h3 {
+    display: flex;
+    font-size: 20px;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 20px;
+    justify-content: end;
 }

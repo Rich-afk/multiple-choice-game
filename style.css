@@ -14,6 +14,12 @@
     justify-content: space-evenly;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 main {
     font-size: 50px;
     text-align: center;
@@ -32,25 +38,27 @@ h1 {
 }
 
 button {
+    margin: 100px;
+    flex-direction: column;
     font-size: 30px;
     text-align: center;
     height: 50px;
-    justify-content: center;
     background-color: black;
     color: white;
-    align-self: center;
     text-decoration: none;
     border: none;
     display: block;
     transition: all 500ms ease;
     border-radius: 10%;
+    align-items: center;
+    justify-content: space-between;
 }
 
 section button {
     font-size: 30px;
     text-align: left;
     height: 50px;
-    justify-content: center;
+    align-items: center;
     background-color: black;
     color: white;
     align-self: center;
@@ -60,6 +68,8 @@ section button {
     transition: all 500ms ease;
     border-radius: 10%;
     margin: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 button:hover {
@@ -89,4 +99,18 @@ article {
     margin: auto;
     width: 50%;
     padding: 10px;
+}
+
+input {
+    margin: 20px;
+}
+
+#questions,
+#start,
+#game,
+#end,
+#highscores {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

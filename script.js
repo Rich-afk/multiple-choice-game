@@ -56,7 +56,7 @@ var questions = [
 ];
 
 function startScreen() {
-    startEl.style.display = "block";
+    startEl.style.display = "flex";
     gameEl.style.display = "none";
     endEl.style.display = "none";
     hsEl.style.display = "none";
@@ -64,7 +64,7 @@ function startScreen() {
 
 function gameScreen() {
     startEl.style.display = "none";
-    gameEl.style.display = "block";
+    gameEl.style.display = "flex";
     endEl.style.display = "none";
     hsEl.style.display = "none";
 
@@ -97,7 +97,7 @@ function renderQuestion() {
 function endScreen() {
     startEl.style.display = "none";
     gameEl.style.display = "none";
-    endEl.style.display = "block";
+    endEl.style.display = "flex";
     hsEl.style.display = "none";
 }
 
@@ -105,7 +105,7 @@ function highscoreScreen() {
     startEl.style.display = "none";
     gameEl.style.display = "none";
     endEl.style.display = "none";
-    hsEl.style.display = "block";
+    hsEl.style.display = "flex";
 
     var localHS = JSON.parse(localStorage.getItem("highScores"));
 

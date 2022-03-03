@@ -110,16 +110,16 @@ function highscoreScreen() {
     var localHS = JSON.parse(localStorage.getItem("highScores"));
 
     for(var i = 0; i < localHS.length ; i++) {
-        var container = document.createElement('div');
+        var container = document.createElement('article');
         container.classList.add("initsection");
         //getting initials from local and displaying
         var initial = localHS[i].initials;
-        var initialHeading = document.createElement('h1');
+        var initialHeading = document.createElement('h2');
         initialHeading.textContent = initial;
         // hsEl.appendChild(initialHeading);
         //getting score from local and displaying
         var score = localHS[i].score;
-        var scoreHeading = document.createElement('h1');
+        var scoreHeading = document.createElement('h2');
         scoreHeading.textContent = score;
         container.appendChild(initialHeading);
         container.appendChild(scoreHeading);

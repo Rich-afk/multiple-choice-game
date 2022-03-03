@@ -94,7 +94,6 @@ function renderQuestion() {
     }
 }
 
-
 function endScreen() {
     startEl.style.display = "none";
     gameEl.style.display = "none";
@@ -155,7 +154,7 @@ function handleInitialSubmit(event) {
 beginBtn.addEventListener('click', gameScreen);
 gameEl.addEventListener('click', function (event) {
     if (event.target.matches('button')) {
-        //
+        //if the button text matches the answer, add 100
         if(event.target.innerHTML === questions[count].correctAns) {
             score += 100;
             //checking if it actually matches

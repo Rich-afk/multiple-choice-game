@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rich Kim Quiz</title>
+    <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
-    <h1>Quiz</h1>
+    <h2 class="time" style="text-align:right;"></h2>
+    <h1>The Rich Kim Quiz</h1>
     <div id="start">
       <h2>Start</h2>
       <button id="begin">Start</button>
@@ -16,12 +18,16 @@
       <h2>Game</h2>
       <div id="questions"></div>
     </div>
-    <div id="end">
+    <form id="end">
       <h2>End Screen</h2>
       <div>
         <label for="initials">Initials: </label>
         <input type="text" id="initials" />
+        <button type="'submit">Submit</button>
       </div>
+    </form>
+    <div id="highscores">
+        <h2>Highscores</h2>
     </div>
     <script src="./script.js"></script>
   </body>

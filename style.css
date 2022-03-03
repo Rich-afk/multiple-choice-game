@@ -1,0 +1,23 @@
+/* .h1 {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+} */
+
+:root {
+    background-color: black;
+    color: antiquewhite;
+}
+
+
+.initsection {
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+}
+
+.h1 {
+    justify-content: center;
+}
+
